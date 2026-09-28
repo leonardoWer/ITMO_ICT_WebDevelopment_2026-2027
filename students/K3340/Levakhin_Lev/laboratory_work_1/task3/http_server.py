@@ -9,7 +9,6 @@ def build_http_response(
         content_type: str = 'text/html; charset=utf-8',
         status: str = '200 OK'
 ) -> bytes:
-    """Собирает HTTP-ответ по стандартному формату."""
     headers = (
         f"HTTP/1.1 {status}\r\n"
         f"Content-Type: {content_type}\r\n"
