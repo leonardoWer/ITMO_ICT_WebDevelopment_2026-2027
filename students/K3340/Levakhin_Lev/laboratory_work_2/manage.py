@@ -1,7 +1,7 @@
 import os
 import sys
 
-# cd  students/K3340/Levakhin_Lev/laboratory_work_2
+# cd students/K3340/Levakhin_Lev/laboratory_work_2
 # .venv\Scripts\activate
 # python manage.py runserver
 

@@ -6,9 +6,10 @@ from .forms import CustomAuthenticationForm
 app_name = 'basketball'
 
 urlpatterns = [
-    path('', views.TeamListView.as_view(), name='team_list'),
+    path('', views.BasketballMatchListView.as_view(), name='match_list'),
+
+    path('teams/', views.TeamListView.as_view(), name='team_list'),
     path('team/<int:pk>/', views.TeamDetailView.as_view(), name='team_detail'),
-    path('matches/', views.MatchListView.as_view(), name='match_list'),
     path('match/<int:pk>/', views.MatchDetailView.as_view(), name='match_detail'),
 
     path('login/', auth_views.LoginView.as_view(

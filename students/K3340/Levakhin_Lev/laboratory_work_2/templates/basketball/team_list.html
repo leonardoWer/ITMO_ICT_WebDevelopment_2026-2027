@@ -13,26 +13,26 @@
 <body class="bg-neutral-900 text-white min-h-screen">
 
     <nav class="bg-neutral-950 border-b-2 border-red-600 p-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-bold tracking-widest uppercase italic">NBA <span class="text-red-600">Запад</span></h1>
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{% url 'basketball:match_list' %}" class="text-3xl font-bold tracking-widest uppercase italic">NBA <span class="text-red-600">Запад</span></a>
 
-        <div class="flex items-center space-x-6 text-sm uppercase tracking-wider">
-            <a href="{% url 'basketball:team_list' %}" class="hover:text-red-500 transition">Команды</a>
-            <a href="{% url 'basketball:match_list' %}" class="hover:text-red-500 transition">Матчи</a>
+            <div class="flex items-center space-x-6 text-sm uppercase tracking-wider">
+                <a href="{% url 'basketball:match_list' %}" class="text-gray-400 hover:text-white transition">Матчи</a>
+                <a href="{% url 'basketball:team_list' %}" class="text-white border-b-2 border-red-600 pb-1">Команды</a>
 
-            {% if user.is_authenticated %}
-                <span class="text-gray-500">|</span>
-                <span class="text-gray-300">Привет, {{ user.username }}</span>
-                <form action="{% url 'basketball:logout' %}" method="post" class="inline">
-                    {% csrf_token %}
-                    <button type="submit" class="text-red-500 hover:text-white transition">Выйти</button>
-                </form>
-            {% else %}
-                <a href="{% url 'basketball:login' %}" class="text-red-500 hover:text-white transition">Войти</a>
-            {% endif %}
+                {% if user.is_authenticated %}
+                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-300">{{ user.username }}</span>
+                    <form action="{% url 'basketball:logout' %}" method="post" class="inline">
+                        {% csrf_token %}
+                        <button type="submit" class="text-red-500 hover:text-white transition">Выйти</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'basketball:login' %}" class="text-red-500 hover:text-white transition">Войти</a>
+                {% endif %}
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main class="container mx-auto mt-10 px-4">
         <h2 class="text-2xl uppercase tracking-wider mb-6 border-l-4 border-red-600 pl-3">Команды</h2>
