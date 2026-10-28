@@ -132,3 +132,6 @@ MAILERS = {
 }
 
 AUTH_USER_MODEL = 'basketball.CustomUser'
+
+LOGIN_REDIRECT_URL = 'basketball:team_list'
+LOGOUT_REDIRECT_URL = 'basketball:team_list'
