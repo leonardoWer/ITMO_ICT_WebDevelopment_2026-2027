@@ -1,8 +1,9 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
+# cd K3340/Levakhin_Lev/laboratory_work_2
+# .venv\Scripts\activate
+# python manage.py runserver
 
 def main():
     """Run administrative tasks."""
