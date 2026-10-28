@@ -5,7 +5,9 @@ repo_url: https://github.com/leonardoWer/ITMO_ICT_WebDevelopment_2026-2027
 nav:
   - Главная: index.md
   - ЛР1:
-      - Отчёт: lr1/report.md
+      - Отчёт: lab1/report.md
+  - ЛР2:
+      - Отчёт: lab2/report.md
 
 theme:
   name: material
